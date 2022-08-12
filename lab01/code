@@ -14,3 +14,39 @@ print((1+1) and 1)
 #print(1/0 or True)
 print((True or False) and False)
 
+#Q4
+def sum_digits_left(n):
+    """Sum all the digits of n.
+
+    >>> sum_digits(10) # 1 + 0 = 1
+    1
+    >>> sum_digits(4224) # 4 + 2 + 2 + 4 = 12
+    12
+    >>> sum_digits(1234567890)
+    45
+    """
+    x = 0
+    s = 0
+    l = len(str(n))
+    while x < l:
+        if n == 0:
+            break
+        digit = n // pow(10, len(str(n)) - 1)  # 5
+        n = n % (digit * pow(10, len(str(n)) - 1))  # 12
+        s += digit
+        x += 1
+    return print(s)# can use return instead of print
+
+
+def sum_digits_right(n):
+    d = 0
+    s = 0
+    while n > 0:
+        d = n % 10
+        n = n // 10
+        s += d
+    return s
+
+sum_digits_left(4224)
+print(sum_digits_right(4224))
+
