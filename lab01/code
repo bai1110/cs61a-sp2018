@@ -14,6 +14,8 @@ print((1+1) and 1)
 #print(1/0 or True)
 print((True or False) and False)
 
+
+
 #Q4
 def sum_digits_left(n):
     """Sum all the digits of n.
@@ -47,6 +49,6 @@ def sum_digits_right(n):
         s += d
     return s
 
-sum_digits_left(4224)
-print(sum_digits_right(4224))
+sum_digits_left(4224) # calculate the digit starting from left
+print(sum_digits_right(4224)) # calculate the digit starting form right
 
