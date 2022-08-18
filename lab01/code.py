@@ -104,6 +104,7 @@ print(sum_digits_right(4224)) # calculate the digit starting form right
 
 
 
+# Q5
 def double_eights(n):
     """Return true if n has two eights in a row.
     >>> double_eights(8)
@@ -129,4 +130,69 @@ def double_eights(n):
         if d1*d2 == 64:
             return True
 print(double_eights(80808080))
+
+
+
+
+#Q7
+def xk(c, d):
+    if c == 4:
+        return 6
+    elif d >= 4:
+        return 6 + 7 + c
+    else:
+        return 25
+print(xk(10, 10))
+print(xk(10, 6))
+print(xk(4, 6))
+print(xk(0, 0))
+
+def how_big(x):
+    if x > 10:
+        print('huge')
+    elif x > 5:
+         return 'big'
+    elif x > 0:
+       print('small')
+    else:
+        print("nothin'")
+
+print(how_big(12))
+print('____________')
+
+def so_big(x):
+    if x > 10:
+        print('huge')
+    if x > 5:
+        return 'big' # quit the statement
+    if x > 0:
+       print('small')
+    print("nothin'")
+
+print(so_big(7))
+print(so_big(12))
+print(so_big(1))
+print('____________')
+
+def ab(c, d):
+    if c > 5:
+        print(c)
+    elif c > 7:
+        print(d)
+    print('foo')
+print(ab(10, 20))
+
+def bake(cake, make):
+    if cake == 0:
+        cake = cake + 1
+        print(cake)
+    if cake == 1:
+        print(make)
+    else:
+        return cake
+    return make # if 'print' will print out "make'
+
+print(bake(0, 29))
+print('____________')
+print(bake(1, "mashed potatoes"))
 
