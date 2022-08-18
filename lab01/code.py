@@ -1,3 +1,11 @@
+# lab 01 Notes:
+"""
+1. lambda: simplified def
+2. if 0 then false
+2. If "and" and "or" do not short-circuit, they just return the last value.
+"""
+
+
 #Q1
 print(True and 13)
 print(False or 0)
@@ -195,4 +203,43 @@ def bake(cake, make):
 print(bake(0, 29))
 print('____________')
 print(bake(1, "mashed potatoes"))
+
+#Q8
+def both_positive(x, y):
+    """Returns True if both x and y are positive.
+
+    >>> both_positive(-1, 1)
+    False
+    >>> both_positive(1, 1)
+    True
+    """
+    return x > 0 and y > 0 # You can replace this line!
+print(both_positive(-1,1))
+print(both_positive(1,1))
+
+
+
+
+#Q9
+def falling(n, k):
+    """Compute the falling factorial of n to depth k.
+
+    >>> falling(6, 3)  # 6 * 5 * 4
+    120
+    >>> falling(4, 0)
+    1
+    >>> falling(4, 3)  # 4 * 3 * 2
+    24
+    >>> falling(4, 1)  # 4
+    4
+    """
+    "*** YOUR CODE HERE ***"
+    product = 1
+    for i in range(0, k):
+        product *= n
+        n -= 1
+    return product
+print(falling(6, 3))
+
+
 
